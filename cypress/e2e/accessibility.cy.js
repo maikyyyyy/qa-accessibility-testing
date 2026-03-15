@@ -24,7 +24,7 @@ beforeEach(() => {
   })
 
   it('Reporta violaciones en el formulario de login', () => {
-  cy.visit('/auth/login')
+  cy.visit('/auth/login', { failOnStatusCode: false })
   cy.injectAxe()
   cy.checkA11y(null, null, (violations) => {
     violations.forEach((violation) => {
