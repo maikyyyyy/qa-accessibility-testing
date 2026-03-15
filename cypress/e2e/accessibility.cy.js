@@ -1,8 +1,8 @@
 describe('Accessibility Tests', () => {
-beforeEach(() => {
-  cy.visit('/', { failOnStatusCode: false })
-  cy.injectAxe()
-})
+  beforeEach(() => {
+    cy.visit('/')
+    cy.injectAxe()
+  })
 
   it('Reporta violaciones de accesibilidad en la página principal', () => {
     cy.checkA11y(null, null, (violations) => {
@@ -24,12 +24,12 @@ beforeEach(() => {
   })
 
   it('Reporta violaciones en el formulario de login', () => {
-  cy.visit('/auth/login', { failOnStatusCode: false })
-  cy.injectAxe()
-  cy.checkA11y(null, null, (violations) => {
-    violations.forEach((violation) => {
-      cy.log(`❌ ${violation.id}: ${violation.description}`)
-    })
-  }, true)
-})
+    cy.visit('/login')
+    cy.injectAxe()
+    cy.checkA11y(null, null, (violations) => {
+      violations.forEach((violation) => {
+        cy.log(`❌ ${violation.id}: ${violation.description}`)
+      })
+    }, true)
+  })
 })
