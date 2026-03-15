@@ -1,5 +1,7 @@
 # QA Accessibility Testing
 
+[![Cypress Accessibility Tests](https://github.com/maikyyyyy/qa-accessibility-testing/actions/workflows/cypress.yml/badge.svg)](https://github.com/maikyyyyy/qa-accessibility-testing/actions/workflows/cypress.yml)
+
 Suite de pruebas de accesibilidad automatizadas con Cypress y axe-core, validando el cumplimiento de las WCAG 2.2.
 
 ## 🧪 ¿Qué se testea?
