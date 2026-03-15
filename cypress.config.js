@@ -1,0 +1,10 @@
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+  e2e: {
+    baseUrl: 'https://practicesoftwaretesting.com',
+    viewportWidth: 1280,
+    viewportHeight: 720,
+    video: false,
+  },
+})
