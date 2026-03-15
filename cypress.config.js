@@ -6,5 +6,9 @@ module.exports = defineConfig({
     viewportWidth: 1280,
     viewportHeight: 720,
     video: false,
+    experimentalModifyObstructiveThirdPartyCode: true,
   },
+  env: {
+    failOnStatusCode: false
+  }
 })

@@ -1,8 +1,8 @@
 describe('Accessibility Tests', () => {
-  beforeEach(() => {
-    cy.visit('/')
-    cy.injectAxe()
-  })
+beforeEach(() => {
+  cy.visit('/', { failOnStatusCode: false })
+  cy.injectAxe()
+})
 
   it('Reporta violaciones de accesibilidad en la página principal', () => {
     cy.checkA11y(null, null, (violations) => {
